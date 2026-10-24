@@ -1,0 +1,104 @@
+[
+  {
+    "method": "popularity",
+    "map5": 0.7293994708994709,
+    "active_map5": 0.7375949705724987,
+    "active_users": 1246,
+    "empty_truth_users": 14,
+    "fit_score_seconds": 0.08547238300002391,
+    "parameters": {
+      "statistic": "unique training viewers"
+    }
+  },
+  {
+    "method": "content",
+    "map5": 0.3507142857142857,
+    "active_map5": 0.3546548956661316,
+    "active_users": 1246,
+    "empty_truth_users": 14,
+    "fit_score_seconds": 2.1732587260000287,
+    "parameters": {
+      "features": "category, genres, year, director, actors",
+      "profile": "log1p airing count",
+      "similarity": "cosine"
+    }
+  },
+  {
+    "method": "als32",
+    "map5": 0.2386507936507937,
+    "active_map5": 0.24133226324237564,
+    "active_users": 1246,
+    "empty_truth_users": 14,
+    "fit_score_seconds": 4.812589754000044,
+    "parameters": {
+      "factors": 32,
+      "alpha": 20,
+      "regularization": 0.1,
+      "iterations": 20
+    }
+  },
+  {
+    "method": "als64",
+    "map5": 0.16013756613756613,
+    "active_map5": 0.16193686463349385,
+    "active_users": 1246,
+    "empty_truth_users": 14,
+    "fit_score_seconds": 14.920388413000012,
+    "parameters": {
+      "factors": 64,
+      "alpha": 20,
+      "regularization": 0.1,
+      "iterations": 20
+    }
+  },
+  {
+    "method": "repeat",
+    "map5": 0.7608148148148147,
+    "active_map5": 0.7693632958801498,
+    "active_users": 1246,
+    "empty_truth_users": 14,
+    "fit_score_seconds": 0,
+    "parameters": {
+      "score": "log1p qualified training airing count; same popularity fallback"
+    }
+  },
+  {
+    "method": "hybrid_0.25",
+    "map5": 0.4362566137566138,
+    "active_map5": 0.4411583734617442,
+    "active_users": 1246,
+    "empty_truth_users": 14,
+    "fit_score_seconds": 0.1576843500000109,
+    "parameters": {
+      "repeat_weight": 0.25,
+      "als": "als32",
+      "rank_offset": 60
+    }
+  },
+  {
+    "method": "hybrid_0.5",
+    "map5": 0.6437619047619048,
+    "active_map5": 0.6509951845906902,
+    "active_users": 1246,
+    "empty_truth_users": 14,
+    "fit_score_seconds": 0.16568977800000084,
+    "parameters": {
+      "repeat_weight": 0.5,
+      "als": "als32",
+      "rank_offset": 60
+    }
+  },
+  {
+    "method": "hybrid_0.75",
+    "map5": 0.7509074074074074,
+    "active_map5": 0.7593445692883896,
+    "active_users": 1246,
+    "empty_truth_users": 14,
+    "fit_score_seconds": 0.15955498599998919,
+    "parameters": {
+      "repeat_weight": 0.75,
+      "als": "als32",
+      "rank_offset": 60
+    }
+  }
+]

@@ -1,0 +1,16 @@
+__pycache__/
+.ipynb_checkpoints/
+.env*
+*token*
+kaggle.json
+data/
+session.*
+*.jsonl
+
+# Individual viewing histories remain private
+evidence/user_examples.json
+evidence/join_examples.json
+validation_truth.json
+validation_predictions.json
+evidence/kaggle_private_score*.jpg
+evidence/submission_evidence.json

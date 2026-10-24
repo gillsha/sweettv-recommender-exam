@@ -1,0 +1,78 @@
+{
+  "seed": 2026,
+  "threshold_seconds": 300,
+  "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+  "platform": "Linux-6.18.55+-x86_64-with-glibc2.39",
+  "cpu_count": 4,
+  "cpu_model": "Intel(R) Xeon(R) CPU @ 2.20GHz",
+  "versions": {
+    "numpy": "2.1.3",
+    "pandas": "2.3.3",
+    "scipy": "1.16.3",
+    "scikit-learn": "1.6.1",
+    "numba": "0.61.2"
+  },
+  "files": {
+    "export_arh_31-42-final.csv": {
+      "size": 185952991
+    },
+    "export_arh_21-30-final.csv": {
+      "size": 154366907
+    },
+    "export_arh_11-20-final.csv": {
+      "size": 153322643
+    },
+    "submission.csv": {
+      "size": 38348
+    },
+    "dataset11-30.csv": {
+      "size": 396216555
+    }
+  },
+  "timings": {
+    "join_seconds": 69.83302296699998,
+    "final_refit_predict_seconds": 3.445717015000014,
+    "total_seconds": 177.38184491699997
+  },
+  "checks": {
+    "duplicate_labelled_airings": 0,
+    "actual_overlap_examples_verified": 8,
+    "train_nonzero_items": 2901,
+    "cold_cohort_users": 10,
+    "validation_new_items": 4222,
+    "training_metadata_only": true,
+    "submission": {
+      "users": 1260,
+      "header": [
+        "user_id",
+        "tv_show_id"
+      ],
+      "five_unique_valid_ids": true
+    },
+    "submission_sha256": "65d4c7509b0a8b323e9446ccf33d3f63768c32229fd7972b9c5be02ae5cf9f5c"
+  },
+  "split": {
+    "train_start": "2020-03-08 00:00:00",
+    "cutoff": "2020-05-18 00:00:00",
+    "validation_end": "2020-07-27 00:00:00",
+    "cohort_size": 1260,
+    "repeats_allowed": true,
+    "empty_truth_AP": 0,
+    "candidate_policy": "labelled IDs airing in prediction window",
+    "test_schedule_features": "ID eligibility only; content metadata from historical schedule",
+    "validation_candidates": 6384,
+    "test_candidates": 6636
+  },
+  "selected": {
+    "method": "repeat",
+    "map5": 0.7608148148148147,
+    "active_map5": 0.7693632958801498,
+    "active_users": 1246,
+    "empty_truth_users": 14,
+    "fit_score_seconds": 0,
+    "parameters": {
+      "score": "log1p qualified training airing count; same popularity fallback"
+    }
+  },
+  "max_rss_kib": 3685284
+}

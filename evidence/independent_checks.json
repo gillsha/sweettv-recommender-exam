@@ -1,0 +1,18 @@
+{
+  "independent_MAP5": {
+    "popularity": 0.7293994708994709,
+    "content": 0.3507142857142857,
+    "als32": 0.2386507936507937,
+    "als64": 0.16013756613756613,
+    "repeat": 0.7608148148148147,
+    "hybrid_0.25": 0.4362566137566138,
+    "hybrid_0.5": 0.6437619047619048,
+    "hybrid_0.75": 0.7509074074074074
+  },
+  "comparison_tolerance": 1e-12,
+  "exact_template_users_order_header": true,
+  "five_unique_nonzero_candidate_IDs": true,
+  "csv_sha256": "65d4c7509b0a8b323e9446ccf33d3f63768c32229fd7972b9c5be02ae5cf9f5c",
+  "user_examples_checked_against_predictions_and_truth": true,
+  "local_training_performed": false
+}

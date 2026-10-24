@@ -1,0 +1,47 @@
+{
+  "rows": 5821987,
+  "invalid_intervals": 0,
+  "duration_mismatch": 0,
+  "clipped_view_seconds": 8619215224,
+  "labelled_overlap_seconds": 4575229505,
+  "rows_with_labelled_overlap": 2964378,
+  "rows_outside_history": 0,
+  "rows_crossing_cutoff": 1007,
+  "overlaps": 3847738,
+  "raw_duration_mismatch": 117,
+  "view_users": 4914,
+  "first_view": "2020-03-09 00:00:02",
+  "last_view_end": "2020-07-26 23:59:58",
+  "duration_quantiles": {
+    "0": 61.0,
+    "0.01": 62.0,
+    "0.1": 80.0,
+    "0.25": 133.0,
+    "0.5": 396.0,
+    "0.75": 1452.0,
+    "0.9": 3911.0,
+    "0.95": 6344.0,
+    "0.99": 14079.139999999665,
+    "1": 342145.0
+  },
+  "view_fraction_at_least_300": 0.5603355005773802,
+  "train_interactions": 1224147,
+  "validation_interactions": 855420,
+  "train_users": 4833,
+  "validation_users": 4799,
+  "train_items": 2901,
+  "validation_items": 3160,
+  "labelled_row_coverage": 0.5091694639647941,
+  "labelled_seconds_coverage": 0.5308174104134658,
+  "qualified_watch_fraction_quantiles": {
+    "0.0": 0.009204892966360857,
+    "0.1": 0.07691666666666666,
+    "0.5": 0.4166666666666667,
+    "0.9": 1.0,
+    "1.0": 1.0
+  },
+  "duration_delta_counts": {
+    "3600": 117
+  },
+  "duration_policy": "Normalize the observed 2020-03-29 clock jump by subtracting 3600 from timestamps at/after 04:00, in BOTH schedule and views. Transition identified within training history; no absolute timezone inferred. Then require stop-start=duraton for every view."
+}
