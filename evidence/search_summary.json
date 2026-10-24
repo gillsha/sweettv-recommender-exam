@@ -1,0 +1,55 @@
+{
+  "runs": 150,
+  "selected": {
+    "run": 63,
+    "half_life_days": 28,
+    "frequency_power": 0.25,
+    "popularity_weight": 0.3,
+    "map5": 0.7896984126984127,
+    "active_map5": 0.7985714285714286,
+    "score_rank_metric_seconds": 0.15696966700488701,
+    "shared_frequency_seconds": 0.009682916977908462,
+    "seed": 2026
+  },
+  "best_search": {
+    "run": 63,
+    "half_life_days": 28,
+    "frequency_power": 0.25,
+    "popularity_weight": 0.3,
+    "map5": 0.7896984126984127,
+    "active_map5": 0.7985714285714286,
+    "score_rank_metric_seconds": 0.15696966700488701,
+    "shared_frequency_seconds": 0.009682916977908462,
+    "seed": 2026
+  },
+  "original_repeat_map5": 0.7608148148148147,
+  "baseline_seconds": 0.2976626669988036,
+  "final_refit_predict_seconds": 0.41812666700570844,
+  "search_and_refit_seconds": 25.07640600000741,
+  "cpu_machine": "arm64",
+  "cpu_count": 8,
+  "python": "3.12.14",
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  },
+  "exact_Kaggle_validation_truth": true,
+  "exact_Kaggle_repeat_rankings": true,
+  "cohort": 1260,
+  "active_users": 1246,
+  "empty_truth_users": 14,
+  "submission_checks": {
+    "users": 1260,
+    "header": [
+      "user_id",
+      "tv_show_id"
+    ],
+    "five_unique_valid_ids": true
+  },
+  "submission_sha256": "b6ac7414d200ae4576311e4768bd9fc3a56aa79211530fbeea3c7e1b26ca90b9",
+  "selection_uses_Kaggle_score": false,
+  "selection_caveat": "150 configurations reuse the same hold-out; selection optimism is possible; no independent quality guarantee",
+  "scoring": "(1-w)*(decayed personal airing count / per-user max)^power + w*(unique training viewers / global max)",
+  "decay": "2^(-age_days/half_life); None means no decay; age from airing start to training cutoff",
+  "shared_cache": "one frequency matrix per half-life, shared by 30 configurations; per-run times include scoring/ranking/metric, not this shared construction"
+}

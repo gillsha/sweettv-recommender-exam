@@ -44,3 +44,7 @@ Before inspecting a Kaggle score: compare popularity, content, implicit ALS32 an
 ALS32→ALS64 changes only factor count; MAP falls by 0.07851323. The cause is not established; more factors alone do not help this protocol. Repeat's separate fit/score timer is unmeasured (stored zero), not instantaneous. Hybrid times include fusion only. The best configuration by hold-out was Repeat; after all-history refitting its exact CSV was independently checked and submitted once. Submission 57603211 is COMPLETE, public 0.37739, private 0.35566. Selection preceded this score; no private-score tuning occurred. Independent MAP recalculation agrees for every method within 1e-12.
 
 Student AP calculation and reflections belong to the course report; the tests and debugging above are agent work.
+
+## User-requested local extension
+
+Exactly 150 distinct configurations and prediction files were evaluated locally after the initial study. The preprocessing and baseline matched Kaggle exactly. Run 63 (half-life 28 days, power .25, popularity weight .30) won by hold-out MAP .7896984127, above Repeat .7608148148. Independent AP checks and the final CSV checks passed. After all-history refitting, submission 57603427 completed with public .37389 and private .35822. No Kaggle score was read by the search program. Search/selection optimism from reusing one hold-out is acknowledged. All aggregate per-run parameters and timings are in evidence/search_results.csv.

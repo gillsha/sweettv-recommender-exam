@@ -2,12 +2,18 @@
 
 Individual project by Elizaveta Gill, prepared with Codex assistance.
 
-## Measured result
+## Current final result after 150 local runs
+
+The user requested 150 additional local runs after the initial Kaggle study. All 150 configurations were actually evaluated and produced distinct prediction lists. Selected run **63**: half-life **28 days**, frequency power **0.25**, popularity weight **0.30**. Hold-out MAP@5 **0.78969841**, previously **0.76081481**. The selection did not use a Kaggle score. New submission **57603427**, **COMPLETE**, private **0.35822**, public **0.37389**.
+
+The root `submission.csv` is now the exact NEW final file; SHA-256 `b6ac7414d200ae4576311e4768bd9fc3a56aa79211530fbeea3c7e1b26ca90b9`. Earlier files remain recoverable in Git history. See [local reproduction instructions](LOCAL_SEARCH.md), `evidence/search_results.csv` (150 rows) and `evidence/search_summary.json`. The linked Kaggle notebook v7 records the initial eight-method study; the additional search and final refit ran locally as requested.
+
+## Initial Kaggle study (preserved comparison)
 
 - [Kaggle Notebook](https://www.kaggle.com/code/liugrowin/sweettv-recommender-exam), executed version 7. The Kaggle notebook is private to the owner; the full reproducible source is public in this repository.
 - Final configuration selected on hold-out: **repeat**, MAP@5 **0.76081481**.
 - Kaggle submission **57603211**, status **COMPLETE**, private score **0.35566**. The frozen leaderboard position is not used.
-- Exact submitted file: `submission.csv`, SHA-256 `65d4c7509b0a8b323e9446ccf33d3f63768c32229fd7972b9c5be02ae5cf9f5c`.
+- Initial file (Git commit 479c876, superseded at repository root), SHA-256 `65d4c7509b0a8b323e9446ccf33d3f63768c32229fd7972b9c5be02ae5cf9f5c`.
 
 ## Fair comparison
 

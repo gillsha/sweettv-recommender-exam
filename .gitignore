@@ -14,3 +14,7 @@ validation_truth.json
 validation_predictions.json
 evidence/kaggle_private_score*.jpg
 evidence/submission_evidence.json
+work/
+*.pkl
+private_predictions/
+selected_validation_predictions.json
