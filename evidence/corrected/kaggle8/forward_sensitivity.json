@@ -1,0 +1,258 @@
+[
+  {
+    "model": "popularity",
+    "policy": "union80",
+    "tie": "id_desc",
+    "map5_fixed_main_cohort": 0.20595238095238097,
+    "same_users": 1078,
+    "altered_truth_users": 785
+  },
+  {
+    "model": "repeat",
+    "policy": "union80",
+    "tie": "id_desc",
+    "map5_fixed_main_cohort": 0.31824984539270257,
+    "same_users": 1078,
+    "altered_truth_users": 785
+  },
+  {
+    "model": "content",
+    "policy": "union80",
+    "tie": "id_desc",
+    "map5_fixed_main_cohort": 0.16627087198515772,
+    "same_users": 1078,
+    "altered_truth_users": 785
+  },
+  {
+    "model": "implicit64",
+    "policy": "union80",
+    "tie": "id_desc",
+    "map5_fixed_main_cohort": 0.11967532467532467,
+    "same_users": 1078,
+    "altered_truth_users": 785
+  },
+  {
+    "model": "count64_bias_reg1",
+    "policy": "union80",
+    "tie": "id_desc",
+    "map5_fixed_main_cohort": 0.31739332096474954,
+    "same_users": 1078,
+    "altered_truth_users": 785
+  },
+  {
+    "model": "ppr50",
+    "policy": "union80",
+    "tie": "id_desc",
+    "map5_fixed_main_cohort": 0.31856524427953,
+    "same_users": 1078,
+    "altered_truth_users": 785
+  },
+  {
+    "model": "hybrid_ppr50_0.5",
+    "policy": "union80",
+    "tie": "id_desc",
+    "map5_fixed_main_cohort": 0.31934137291280146,
+    "same_users": 1078,
+    "altered_truth_users": 785
+  },
+  {
+    "model": "schedule_0.5",
+    "policy": "union80",
+    "tie": "id_desc",
+    "map5_fixed_main_cohort": 0.3190321583178726,
+    "same_users": 1078,
+    "altered_truth_users": 785
+  },
+  {
+    "model": "popularity",
+    "policy": "union80",
+    "tie": "hash",
+    "map5_fixed_main_cohort": 0.21847247990105131,
+    "same_users": 1078,
+    "altered_truth_users": 645
+  },
+  {
+    "model": "repeat",
+    "policy": "union80",
+    "tie": "hash",
+    "map5_fixed_main_cohort": 0.3361069882498454,
+    "same_users": 1078,
+    "altered_truth_users": 645
+  },
+  {
+    "model": "content",
+    "policy": "union80",
+    "tie": "hash",
+    "map5_fixed_main_cohort": 0.18336116264687696,
+    "same_users": 1078,
+    "altered_truth_users": 645
+  },
+  {
+    "model": "implicit64",
+    "policy": "union80",
+    "tie": "hash",
+    "map5_fixed_main_cohort": 0.13379097093382808,
+    "same_users": 1078,
+    "altered_truth_users": 645
+  },
+  {
+    "model": "count64_bias_reg1",
+    "policy": "union80",
+    "tie": "hash",
+    "map5_fixed_main_cohort": 0.33431663574520715,
+    "same_users": 1078,
+    "altered_truth_users": 645
+  },
+  {
+    "model": "ppr50",
+    "policy": "union80",
+    "tie": "hash",
+    "map5_fixed_main_cohort": 0.3371397649969079,
+    "same_users": 1078,
+    "altered_truth_users": 645
+  },
+  {
+    "model": "hybrid_ppr50_0.5",
+    "policy": "union80",
+    "tie": "hash",
+    "map5_fixed_main_cohort": 0.33732838589981445,
+    "same_users": 1078,
+    "altered_truth_users": 645
+  },
+  {
+    "model": "schedule_0.5",
+    "policy": "union80",
+    "tie": "hash",
+    "map5_fixed_main_cohort": 0.33564316635745206,
+    "same_users": 1078,
+    "altered_truth_users": 645
+  },
+  {
+    "model": "popularity",
+    "policy": "single80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.2535582869511441,
+    "same_users": 1078,
+    "altered_truth_users": 283
+  },
+  {
+    "model": "repeat",
+    "policy": "single80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.3605148423005566,
+    "same_users": 1078,
+    "altered_truth_users": 283
+  },
+  {
+    "model": "content",
+    "policy": "single80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.19423340548340548,
+    "same_users": 1078,
+    "altered_truth_users": 283
+  },
+  {
+    "model": "implicit64",
+    "policy": "single80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.14953514739229024,
+    "same_users": 1078,
+    "altered_truth_users": 283
+  },
+  {
+    "model": "count64_bias_reg1",
+    "policy": "single80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.35856215213358067,
+    "same_users": 1078,
+    "altered_truth_users": 283
+  },
+  {
+    "model": "ppr50",
+    "policy": "single80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.362634508348794,
+    "same_users": 1078,
+    "altered_truth_users": 283
+  },
+  {
+    "model": "hybrid_ppr50_0.5",
+    "policy": "single80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.36316635745207176,
+    "same_users": 1078,
+    "altered_truth_users": 283
+  },
+  {
+    "model": "schedule_0.5",
+    "policy": "single80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.35901128633271495,
+    "same_users": 1078,
+    "altered_truth_users": 283
+  },
+  {
+    "model": "popularity",
+    "policy": "sessions80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.25235853432282007,
+    "same_users": 1078,
+    "altered_truth_users": 303
+  },
+  {
+    "model": "repeat",
+    "policy": "sessions80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.3596985157699443,
+    "same_users": 1078,
+    "altered_truth_users": 303
+  },
+  {
+    "model": "content",
+    "policy": "sessions80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.19469104308390023,
+    "same_users": 1078,
+    "altered_truth_users": 303
+  },
+  {
+    "model": "implicit64",
+    "policy": "sessions80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.14966501752216038,
+    "same_users": 1078,
+    "altered_truth_users": 303
+  },
+  {
+    "model": "count64_bias_reg1",
+    "policy": "sessions80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.3577396413110699,
+    "same_users": 1078,
+    "altered_truth_users": 303
+  },
+  {
+    "model": "ppr50",
+    "policy": "sessions80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.361638837353123,
+    "same_users": 1078,
+    "altered_truth_users": 303
+  },
+  {
+    "model": "hybrid_ppr50_0.5",
+    "policy": "sessions80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.3621645021645022,
+    "same_users": 1078,
+    "altered_truth_users": 303
+  },
+  {
+    "model": "schedule_0.5",
+    "policy": "sessions80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.35831555349412497,
+    "same_users": 1078,
+    "altered_truth_users": 303
+  }
+]

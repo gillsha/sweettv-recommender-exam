@@ -1,0 +1,75 @@
+[
+  {
+    "id": "popularity",
+    "family": "popularity",
+    "map5": 0.250878169449598,
+    "all1260_map5": 0.23340343915343917,
+    "seconds": 0.09453608299372718
+  },
+  {
+    "id": "repeat",
+    "family": "repeat",
+    "map5": 0.36358070500927636,
+    "all1260_map5": 0.3350372574955908,
+    "seconds": 0.09585529199102893
+  },
+  {
+    "id": "content",
+    "family": "content",
+    "map5": 0.19586580086580088,
+    "all1260_map5": 0.18667460317460316,
+    "seconds": 0.8747738339880016
+  },
+  {
+    "id": "implicit64",
+    "family": "implicit",
+    "params": {
+      "factors": 64,
+      "regularization": 0.1
+    },
+    "map5": 0.14968150896722326,
+    "all1260_map5": 0.14648236331569664,
+    "seconds": 3.810785583977122
+  },
+  {
+    "id": "count64_bias_reg1",
+    "family": "count_mf",
+    "params": {
+      "factors": 64,
+      "regularization": 1.0,
+      "alpha": 20,
+      "bias": true
+    },
+    "map5": 0.361573902288188,
+    "all1260_map5": 0.33373368606701936,
+    "seconds": 4.432630041992525
+  },
+  {
+    "id": "ppr50",
+    "family": "ppr",
+    "params": {
+      "damping": 0.5,
+      "neighbors": 50
+    },
+    "map5": 0.36551638837353123,
+    "all1260_map5": 0.3370306437389771,
+    "seconds": 2.3562680420000106
+  },
+  {
+    "id": "hybrid_ppr50_0.5",
+    "family": "hybrid",
+    "component": "ppr50",
+    "weight": 0.5,
+    "map5": 0.36598639455782317,
+    "all1260_map5": 0.33694995590828924,
+    "seconds": 2.8816182089794893
+  },
+  {
+    "id": "schedule_0.5",
+    "family": "schedule",
+    "beta": 0.5,
+    "map5": 0.3617037724180581,
+    "all1260_map5": 0.3327502204585538,
+    "seconds": 0.2806802919949405
+  }
+]

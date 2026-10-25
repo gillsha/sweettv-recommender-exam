@@ -1,0 +1,7 @@
+{
+  "final_manifest_training_users_definition": "Matrix rows including template cold users, despite historical field name.",
+  "observed_training_users": 4841,
+  "matrix_users_including_cold_template_users": 4845,
+  "fewer_than_five_main_policy": "excluded from primary MAP; separately included in all1260 diagnostic",
+  "sensitivity_field_map5_fixed_main_cohort": "Means fixed strict-five cohort of the corresponding window; forward file uses 1078 forward users, not the 775 main users."
+}

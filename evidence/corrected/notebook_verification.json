@@ -1,0 +1,20 @@
+{
+  "version": 8,
+  "status": "COMPLETE",
+  "url": "https://www.kaggle.com/code/liugrowin/sweettv-recommender-exam",
+  "notebook_source_sha256": "cec4bfe2fed48110f1bfae5e9881d825211897b6e05bd9252efd5bd2e4abe1c5",
+  "final_csv_identical": true,
+  "csv_sha256": "a1edc3775457c57ba1e0862a9eb36cec4ee355f07e7505dd2c1405d2027ad01c",
+  "contract": {
+    "users": 1260,
+    "header": [
+      "user_id",
+      "tv_show_id"
+    ],
+    "five_unique_valid_ids": true
+  },
+  "max_metric_difference": {
+    "main": 8.602150537634357e-05,
+    "forward": 0.0
+  }
+}

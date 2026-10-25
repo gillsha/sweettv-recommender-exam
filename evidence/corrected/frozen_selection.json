@@ -1,0 +1,88 @@
+{
+  "winner": {
+    "id": "hybrid_ppr50_0.5",
+    "family": "hybrid",
+    "component": "ppr50",
+    "weight": 0.5,
+    "map5": 0.3954064516129032,
+    "all1260_map5": 0.2796360229276896,
+    "seconds": 2.195829083007993
+  },
+  "families": [
+    {
+      "id": "popularity",
+      "family": "popularity",
+      "map5": 0.291647311827957,
+      "all1260_map5": 0.20840299823633157,
+      "seconds": 0.07959958401625045
+    },
+    {
+      "id": "repeat",
+      "family": "repeat",
+      "map5": 0.3923870967741936,
+      "all1260_map5": 0.2779673721340388,
+      "seconds": 0.08350987499579787
+    },
+    {
+      "id": "content",
+      "family": "content",
+      "map5": 0.22421505376344084,
+      "all1260_map5": 0.16599096119929452,
+      "seconds": 0.7065587919787504
+    },
+    {
+      "id": "implicit64",
+      "family": "implicit",
+      "params": {
+        "factors": 64,
+        "regularization": 0.1
+      },
+      "map5": 0.17013333333333333,
+      "all1260_map5": 0.13110273368606704,
+      "seconds": 3.0155956670059822
+    },
+    {
+      "id": "count64_bias_reg1",
+      "family": "count_mf",
+      "params": {
+        "factors": 64,
+        "regularization": 1.0,
+        "alpha": 20,
+        "bias": true
+      },
+      "map5": 0.39009032258064513,
+      "all1260_map5": 0.27545238095238095,
+      "seconds": 3.3978338750021067
+    },
+    {
+      "id": "ppr50",
+      "family": "ppr",
+      "params": {
+        "damping": 0.5,
+        "neighbors": 50
+      },
+      "map5": 0.39382795698924733,
+      "all1260_map5": 0.27784391534391534,
+      "seconds": 1.7602002920175437
+    },
+    {
+      "id": "hybrid_ppr50_0.5",
+      "family": "hybrid",
+      "component": "ppr50",
+      "weight": 0.5,
+      "map5": 0.3954064516129032,
+      "all1260_map5": 0.2796360229276896,
+      "seconds": 2.195829083007993
+    },
+    {
+      "id": "schedule_0.5",
+      "family": "schedule",
+      "beta": 0.5,
+      "map5": 0.39195698924731187,
+      "all1260_map5": 0.27652777777777776,
+      "seconds": 0.22890929199638776
+    }
+  ],
+  "selected_using": "main window only; forward scores not yet computed",
+  "frozen_at_utc": "2026-10-25T12:08:30.600926+00:00"
+}

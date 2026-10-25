@@ -1,0 +1,15 @@
+{
+  "view_rows": 5821987,
+  "duration_mismatch": 0,
+  "positive_overlap_rows": 2964378,
+  "labelled_overlap_seconds": 4575229505,
+  "total_view_seconds": 8619215224,
+  "positive_user_airings": 3014157,
+  "qualified80_user_airings": 611757,
+  "qualified80_under300": 10604,
+  "deduplicated_identical_sessions": 13,
+  "union_vs_single_different": 48822,
+  "join_seconds": 322.4051132579999,
+  "cache_source": "fresh raw CSV join; no previous interaction cache read",
+  "threshold": "5*union_seconds >= 4*programme_seconds"
+}

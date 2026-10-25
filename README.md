@@ -1,62 +1,63 @@
-# sweet.tv recommender exam
+# sweet.tv recommender exam — corrected target
 
-Individual project by Elizaveta Gill, prepared with Codex assistance.
+Individual project by Elizaveta Gill, with disclosed Codex assistance.
 
-## Current final result after 150 local runs
+## Current result
 
-The user requested 150 additional local runs after the initial Kaggle study. All 150 configurations were actually evaluated and produced distinct prediction lists. Selected run **63**: half-life **28 days**, frequency power **0.25**, popularity weight **0.30**. Hold-out MAP@5 **0.78969841**, previously **0.76081481**. The selection did not use a Kaggle score. New submission **57603427**, **COMPLETE**, private **0.35822**, public **0.37389**.
+The previous >=300-second / all-unique relevance protocol was **wrong for Kaggle model selection**. The author identified the target mismatch. The earlier project is preserved at tag `baseline-before-target-fix-20261025` (commit `89efb09`); historical 150-run results are not evidence for the new choice.
 
-The root `submission.csv` is now the exact NEW final file; SHA-256 `b6ac7414d200ae4576311e4768bd9fc3a56aa79211530fbeea3c7e1b26ca90b9`. Earlier files remain recoverable in Git history. See [local reproduction instructions](LOCAL_SEARCH.md), `evidence/search_results.csv` (150 rows) and `evidence/search_summary.json`. The linked Kaggle notebook v7 records the initial eight-method study; the additional search and final refit ran locally as requested.
+The corrected target reconstructs fresh raw overlaps, qualifies user–airing coverage >=80%, counts qualifying airings per user/programme, and retains the five most frequent IDs. See [the complete protocol](revised/PROTOCOL.md) for explicit assumptions, tie handling, boundary airings, cold users and sensitivity checks. The source does not specify every detail of hidden-label construction; exact organizer equivalence is not claimed.
 
-## Initial Kaggle study (preserved comparison)
+Final model: **Repeat + Personalized PageRank**, reciprocal rank fusion `0.5/(20+r_repeat)+0.5/(20+r_ppr)`. PPR uses 50 cosine co-view neighbors, damping 0.5 and personal-count restart. The model was selected on window A before evaluating independent window B or submitting to Kaggle.
 
-- [Kaggle Notebook](https://www.kaggle.com/code/liugrowin/sweettv-recommender-exam), executed version 7. The Kaggle notebook is private to the owner; the full reproducible source is public in this repository.
-- Final configuration selected on hold-out: **repeat**, MAP@5 **0.76081481**.
-- Kaggle submission **57603211**, status **COMPLETE**, private score **0.35566**. The frozen leaderboard position is not used.
-- Initial file (Git commit 479c876, superseded at repository root), SHA-256 `65d4c7509b0a8b323e9446ccf33d3f63768c32229fd7972b9c5be02ae5cf9f5c`.
+Kaggle submission **57629703**, **COMPLETE**, public **0.40594**, private **0.39796**. Earlier submission 57603427: public 0.37389, private 0.35822. Scores are measured submissions, not leaderboard positions. Root `submission.csv` is the exact new submitted file; SHA-256:
 
-## Fair comparison
+`a1edc3775457c57ba1e0862a9eb36cec4ee355f07e7505dd2c1405d2027ad01c`
 
-| Method | MAP@5, all 1260 users | MAP@5, active users | Fit + scoring seconds |
+[Kaggle Notebook](https://www.kaggle.com/code/liugrowin/sweettv-recommender-exam), executed version **8**. The run remains private to the owner because its outputs include individual viewing histories. The complete self-contained notebook source and aggregate results are publicly accessible here without teacher authentication. Local/Kaggle final CSV identity: **True**.
+
+## Main comparison
+
+A: train 2020-03-09 to 2020-05-18 exclusive; validation 2020-05-18 to 2020-06-22 exclusive. B: train to 2020-06-22 exclusive; validation 2020-06-22 to 2020-07-27 exclusive. Main evaluation cohorts have at least five qualified unique programmes: **775 / 1078** users; every truth has exactly five IDs. Cohorts are identical across methods within each window. Twenty-seven focused configurations were evaluated on A; only frozen family winners were evaluated on B. Both horizons are five weeks, versus the competition's twelve-week forecast.
+
+| Method | MAP@5 A | MAP@5 B | Fit + score + rank seconds A / B |
 |---|---:|---:|---:|
-| popularity | 0.72939947 | 0.73759497 | 0.085 |
-| content | 0.35071429 | 0.35465490 | 2.173 |
-| als32 | 0.23865079 | 0.24133226 | 4.813 |
-| als64 | 0.16013757 | 0.16193686 | 14.920 |
-| repeat | 0.76081481 | 0.76936330 | 0.000 |
-| hybrid_0.25 | 0.43625661 | 0.44115837 | 0.158 |
-| hybrid_0.5 | 0.64376190 | 0.65099518 | 0.166 |
-| hybrid_0.75 | 0.75090741 | 0.75934457 | 0.160 |
+| popularity | 0.29164731 | 0.25087817 | 0.080 / 0.095 |
+| repeat | 0.39238710 | 0.36358071 | 0.084 / 0.096 |
+| content | 0.22421505 | 0.19586580 | 0.707 / 0.875 |
+| implicit64 | 0.17013333 | 0.14968151 | 3.016 / 3.811 |
+| count64_bias_reg1 | 0.39009032 | 0.36157390 | 3.398 / 4.433 |
+| ppr50 | 0.39382796 | 0.36551639 | 1.760 / 2.356 |
+| hybrid_ppr50_0.5 | 0.39540645 | 0.36598639 | 2.196 / 2.882 |
+| schedule_0.5 | 0.39195699 | 0.36170377 | 0.229 / 0.281 |
 
-Primary metric includes empty-relevance users with AP=0. Active-only MAP is diagnostic, not the selection criterion. Cold-start uses the same popularity fallback in every model. All methods allow repeats and use the same 6384 validation candidates. ALS32 -> ALS64 changes only factor count. All other hyperparameters and the seed are fixed. Hybrid timings exclude component fitting; Repeat's separate timer was not measured (stored as 0). Ranking and metric calculation are outside the fit/score timer. Exact configurations and timings are in `evidence/run_manifest.json` and `evidence/validation_results.json`.
 
-## Reproduce in Kaggle (free CPU)
+Times are the local measured fit + scoring + Top-5 ranking; hybrids include both component costs. Shared raw preparation, JIT warm-up and metric calculation are excluded consistently. Hardware/software details and separate Kaggle times are in `evidence/corrected/`. Main/forward all-1260 diagnostics (up to five truth IDs, empty AP=0) are recorded separately, not substituted for the strict-five metric.
 
-1. Personally accept [competition rules](https://www.kaggle.com/competitions/sweettv-tv-program-recommender/rules) in your own Kaggle account.
-2. Create a Python Notebook, attach `sweettv-tv-program-recommender`, select CPU, and import `sweettv.ipynb`. Internet and GPU are not required. **Run All**. All implementation modules are embedded in the notebook; no private local path or credential is needed.
-3. Or use the official Kaggle CLI: copy `kernel-metadata.json`, change its owner/id to your own unused notebook slug, then `kaggle kernels push -p .`. Never overwrite somebody else's notebook.
-4. Wait for COMPLETE and download outputs with `kaggle kernels output YOUR_OWNER/YOUR_SLUG -p run_outputs`.
-5. Inspect `validation_results.json`, `coverage.json`, `user_examples.json`, and `run_manifest.json`; compare the generated submission SHA with the recorded hash. Minor floating-point differences on different library/hardware versions may affect exact ties.
-6. Submit only after checking the generated CSV against the actual template. The source never submits automatically. This repository includes the exact file submitted for the reported score.
+AP@5 = sum of Precision@rank at hit positions / 5 for the main cohort. MAP is the mean over that fixed cohort; duplicate predictions receive no extra credit. For the diagnostic cohort the denominator is min(5, number of relevant IDs), with empty AP=0. An independent implementation checks each AP against `core.ap_at_k`.
 
-The measured environment is Python 3.13.15, Intel(R) Xeon(R) CPU @ 2.20GHz, 4 reported CPU cores. Package versions are pinned in `requirements.txt`. Main pipeline runtime: 177.4 s; final refit+score: 3.4 s. Kaggle startup and previous failed runs are additional.
+## What changed and what did not work
 
-## Design
+- Fresh raw reconstruction retained **10,604** qualifying user–airings below 300 seconds. Unioning sessions changes qualification for **48,822** user–airings; exact duplicate sessions are removed. Short-airing checks and independent union arithmetic are recorded.
+- At fixed 32 dimensions and lambda 0.1, replacing binary preference with `log1p(count)` improved main MAP from **0.15807 to 0.38492**. Item bias, regularization, factor dimension and confidence were then varied separately; all configurations remain in `main_results.json`.
+- The selected count MF minimizes weighted squared errors over observed and unobserved pairs, plus L2 factor and item-bias penalties. Observed weight is `1+20*log1p(count)`; missing target 0 and weight 1. The bias is regularized, not an unpenalized popularity shortcut. Dense normal-equation verification covers nonzero bias and cold rows.
+- A schedule-rate correction based only on future airings and historical channel preferences was **worse than Repeat on both windows** and excluded from the final model. The allowed future grid never supplies user behaviour or future content features.
+- The final hybrid's improvements over Repeat are small: **+0.003019 / +0.002406** on A/B. Conditional paired-user bootstrap on B: 95% interval [0.000671, 0.004221], 2,000 resamples, seed 2026. This does not resolve label ambiguity.
+- Descending-ID frequency ties produce hybrid/Repeat MAP **0.34649/0.34532** on A and **0.31934/0.31825** on B. This target uncertainty is much larger than the hybrid gain. Single-session and qualifying-session-count variants are also reported with frozen predictions on the same cohort. No alternative convention was selected using private scores.
+- Only about 10.8% of first-schedule rows have labels. The join covers 50.9% of viewing rows and 53.1% of viewing seconds. Unlabelled airtime is not a negative preference; offline scores do not establish enjoyment or revenue.
 
-- Same-channel interval overlap, half-open intervals; union duplicated/overlapping views per airing; watched threshold 300 seconds. `duraton` is a viewing duration, never a programme duration. `tv_show_id=0` is unlabelled airtime, never a recommendation.
-- A 3600-second clock discontinuity on 2020-03-29 was identified in training timestamps. Both schedule and viewing timestamps at/after 04:00 are mapped back by one hour onto a continuous relative axis; no absolute timezone is claimed. All 5,821,987 viewing durations are checked after the correction. Original and corrected mismatch counts are retained in the coverage evidence.
-- Train before 2020-05-18; validation from 2020-05-18 to 2020-07-27. Exact prediction cohort is the original template's 1260 user IDs, read as strings. Candidate IDs come from the future airing grid only. Content vocabulary, IDF, popularity and factors use historical data only.
-- AP@5 = sum(precision at each hit rank) / min(5, number of unique relevant programmes); empty truth gives 0. MAP is the mean over the fixed cohort.
-- Popularity, attribute TF-IDF content filtering, custom weighted implicit ALS, repeat count, and separately evaluated reciprocal-rank hybrids. Confidence is 1+20*log(1+qualified-airing-count), regularization .1, 20 ALS iterations, seed 2026.
-- Final training recombines airings crossing the old split before applying the threshold, rather than counting one airing twice.
+## Reproduce
 
-## Files and verification
+1. Personally accept [competition rules](https://www.kaggle.com/competitions/sweettv-tv-program-recommender/rules), download the five files into a private directory. `.csv.zip` inputs are supported. Never commit raw files or credentials.
+2. Free Kaggle CPU: import `sweettv.ipynb`, attach `sweettv-tv-program-recommender`, disable Internet/GPU, Run All. All source modules are embedded; no installation or secret is embedded. It runs target tests, fresh reconstruction, A selection, freeze, B evaluation and full-history refit. The notebook does not submit automatically.
+3. Local Python 3.12: create a virtual environment and `pip install -r requirements.txt`. From this repository run:
+   ```sh
+   OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 python revised/test_target.py
+   OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 python pipeline.py --data /absolute/private/data --output /absolute/private/results
+   ```
+4. Inspect `final_manifest.json`, validate the SHA, exact template order, unique nonzero candidate IDs and score evidence. Different library/hardware versions may cause numerical variation; both measured environments are saved. Downloaded notebook outputs containing viewing histories must stay private.
+5. Optional post-freeze diagnostics: `SWEETTV_DATA=/absolute/private/data SWEETTV_REVISION_OUT=/absolute/private/results python -m revised.diagnostics`. If a private `example_users.json` exists, those same two users are used for all methods; otherwise lower/upper quartiles of final AP are chosen. No per-user examples are included in this public repository.
 
-- `core.py`, `models.py`, `als.py`, `pipeline.py`: implementation.
-- `sweettv.ipynb`: self-contained Kaggle notebook; `build_notebook.py` rebuilds it from modules.
-- `test_core.py`: five synthetic contract tests; run `python -m unittest -v test_core`. The Kaggle notebook runs them as well.
-- `als.verify_solver()`: independent dense normal-equation check and cold-user check.
-- `evidence/`: aggregate measured results, environment and CSV validation. The genuine Kaggle screenshot is included only in the local course report.
-- `EXPERIMENT_LOG.md`: actual failures and corrections; `PROTOCOL.md`: fixed validation design.
+Current implementation: `pipeline.py`, `revised/`, shared `als.py`, `models.py`, `core.py`; `build_notebook.py` rebuilds the self-contained notebook. Legacy files are clearly marked and are not invoked by the corrected entry point. Exact test CSV is `submission.csv`. Main/forward protocols, full parameters, time, environment and aggregate sensitivity are in `evidence/corrected/`.
 
-Raw competition CSV files, credentials and the private AI-session export are excluded. Individual viewing histories and the two illustrative examples are retained in the local course report and private notebook outputs, not published here. The student's personal verification is recorded separately in the course report; agent tests are not claimed as student work. There was no online A/B test, enjoyment measurement or revenue estimate.
+The report, genuine private-score screenshot, personal verification and original AI-session export stay in the local course-submission materials. No teacher message was sent. The author personally checked a new AP calculation and discussed the target and ties; automated tests are agent checks, not student work.

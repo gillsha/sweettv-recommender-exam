@@ -1,0 +1,258 @@
+[
+  {
+    "model": "popularity",
+    "policy": "union80",
+    "tie": "id_desc",
+    "map5_fixed_main_cohort": 0.2388989247311828,
+    "same_users": 775,
+    "altered_truth_users": 557
+  },
+  {
+    "model": "repeat",
+    "policy": "union80",
+    "tie": "id_desc",
+    "map5_fixed_main_cohort": 0.34531612903225806,
+    "same_users": 775,
+    "altered_truth_users": 557
+  },
+  {
+    "model": "content",
+    "policy": "union80",
+    "tie": "id_desc",
+    "map5_fixed_main_cohort": 0.19403440860215054,
+    "same_users": 775,
+    "altered_truth_users": 557
+  },
+  {
+    "model": "implicit64",
+    "policy": "union80",
+    "tie": "id_desc",
+    "map5_fixed_main_cohort": 0.13188387096774193,
+    "same_users": 775,
+    "altered_truth_users": 557
+  },
+  {
+    "model": "count64_bias_reg1",
+    "policy": "union80",
+    "tie": "id_desc",
+    "map5_fixed_main_cohort": 0.3435483870967742,
+    "same_users": 775,
+    "altered_truth_users": 557
+  },
+  {
+    "model": "ppr50",
+    "policy": "union80",
+    "tie": "id_desc",
+    "map5_fixed_main_cohort": 0.3450451612903226,
+    "same_users": 775,
+    "altered_truth_users": 557
+  },
+  {
+    "model": "hybrid_ppr50_0.5",
+    "policy": "union80",
+    "tie": "id_desc",
+    "map5_fixed_main_cohort": 0.34649462365591394,
+    "same_users": 775,
+    "altered_truth_users": 557
+  },
+  {
+    "model": "schedule_0.5",
+    "policy": "union80",
+    "tie": "id_desc",
+    "map5_fixed_main_cohort": 0.35273548387096776,
+    "same_users": 775,
+    "altered_truth_users": 557
+  },
+  {
+    "model": "popularity",
+    "policy": "union80",
+    "tie": "hash",
+    "map5_fixed_main_cohort": 0.26276989247311827,
+    "same_users": 775,
+    "altered_truth_users": 448
+  },
+  {
+    "model": "repeat",
+    "policy": "union80",
+    "tie": "hash",
+    "map5_fixed_main_cohort": 0.3685118279569893,
+    "same_users": 775,
+    "altered_truth_users": 448
+  },
+  {
+    "model": "content",
+    "policy": "union80",
+    "tie": "hash",
+    "map5_fixed_main_cohort": 0.21372043010752687,
+    "same_users": 775,
+    "altered_truth_users": 448
+  },
+  {
+    "model": "implicit64",
+    "policy": "union80",
+    "tie": "hash",
+    "map5_fixed_main_cohort": 0.15568172043010753,
+    "same_users": 775,
+    "altered_truth_users": 448
+  },
+  {
+    "model": "count64_bias_reg1",
+    "policy": "union80",
+    "tie": "hash",
+    "map5_fixed_main_cohort": 0.36608172043010756,
+    "same_users": 775,
+    "altered_truth_users": 448
+  },
+  {
+    "model": "ppr50",
+    "policy": "union80",
+    "tie": "hash",
+    "map5_fixed_main_cohort": 0.36876129032258065,
+    "same_users": 775,
+    "altered_truth_users": 448
+  },
+  {
+    "model": "hybrid_ppr50_0.5",
+    "policy": "union80",
+    "tie": "hash",
+    "map5_fixed_main_cohort": 0.3708731182795699,
+    "same_users": 775,
+    "altered_truth_users": 448
+  },
+  {
+    "model": "schedule_0.5",
+    "policy": "union80",
+    "tie": "hash",
+    "map5_fixed_main_cohort": 0.372941935483871,
+    "same_users": 775,
+    "altered_truth_users": 448
+  },
+  {
+    "model": "popularity",
+    "policy": "single80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.29679032258064514,
+    "same_users": 775,
+    "altered_truth_users": 235
+  },
+  {
+    "model": "repeat",
+    "policy": "single80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.3894103942652329,
+    "same_users": 775,
+    "altered_truth_users": 235
+  },
+  {
+    "model": "content",
+    "policy": "single80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.22371326164874555,
+    "same_users": 775,
+    "altered_truth_users": 235
+  },
+  {
+    "model": "implicit64",
+    "policy": "single80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.16774157706093187,
+    "same_users": 775,
+    "altered_truth_users": 235
+  },
+  {
+    "model": "count64_bias_reg1",
+    "policy": "single80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.38744695340501795,
+    "same_users": 775,
+    "altered_truth_users": 235
+  },
+  {
+    "model": "ppr50",
+    "policy": "single80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.39051899641577065,
+    "same_users": 775,
+    "altered_truth_users": 235
+  },
+  {
+    "model": "hybrid_ppr50_0.5",
+    "policy": "single80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.39203405017921145,
+    "same_users": 775,
+    "altered_truth_users": 235
+  },
+  {
+    "model": "schedule_0.5",
+    "policy": "single80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.38974372759856635,
+    "same_users": 775,
+    "altered_truth_users": 235
+  },
+  {
+    "model": "popularity",
+    "policy": "sessions80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.2964505376344086,
+    "same_users": 775,
+    "altered_truth_users": 259
+  },
+  {
+    "model": "repeat",
+    "policy": "sessions80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.38959964157706095,
+    "same_users": 775,
+    "altered_truth_users": 259
+  },
+  {
+    "model": "content",
+    "policy": "sessions80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.22324014336917564,
+    "same_users": 775,
+    "altered_truth_users": 259
+  },
+  {
+    "model": "implicit64",
+    "policy": "sessions80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.16775448028673834,
+    "same_users": 775,
+    "altered_truth_users": 259
+  },
+  {
+    "model": "count64_bias_reg1",
+    "policy": "sessions80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.3876362007168459,
+    "same_users": 775,
+    "altered_truth_users": 259
+  },
+  {
+    "model": "ppr50",
+    "policy": "sessions80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.390605017921147,
+    "same_users": 775,
+    "altered_truth_users": 259
+  },
+  {
+    "model": "hybrid_ppr50_0.5",
+    "policy": "sessions80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.3921200716845878,
+    "same_users": 775,
+    "altered_truth_users": 259
+  },
+  {
+    "model": "schedule_0.5",
+    "policy": "sessions80",
+    "tie": "id_asc",
+    "map5_fixed_main_cohort": 0.3899329749103943,
+    "same_users": 775,
+    "altered_truth_users": 259
+  }
+]

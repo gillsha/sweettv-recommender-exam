@@ -1,0 +1,1 @@
+These files preserve the invalid >=300-second/all-unique-target experiment. Do not use its MAP values to select a competition model. Full prior project: Git tag baseline-before-target-fix-20261025 (commit 89efb09).

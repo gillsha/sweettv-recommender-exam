@@ -1,0 +1,26 @@
+{
+  "selected": {
+    "id": "hybrid_ppr50_0.5",
+    "family": "hybrid",
+    "component": "ppr50",
+    "weight": 0.5,
+    "map5": 0.3954064516129032,
+    "all1260_map5": 0.2796360229276896,
+    "seconds": 2.195829083007993
+  },
+  "fit_score_rank_seconds": 3.394720292009879,
+  "training_airings": 611755,
+  "training_users": 4845,
+  "training_items": 3865,
+  "candidates": 6653,
+  "csv_sha256": "a1edc3775457c57ba1e0862a9eb36cec4ee355f07e7505dd2c1405d2027ad01c",
+  "contract": {
+    "users": 1260,
+    "header": [
+      "user_id",
+      "tv_show_id"
+    ],
+    "five_unique_valid_ids": true
+  },
+  "test_end_seconds": 1603098600
+}

@@ -1,0 +1,20 @@
+{
+  "independent_short_example_union_seconds": 240,
+  "short_example_programme_duration": 240,
+  "qualified80_below300": true,
+  "union_le_programme_duration": true,
+  "positive_overlap_seconds_quantiles": {
+    "0.0": 1.0,
+    "0.25": 213.0,
+    "0.5": 711.0,
+    "0.75": 1985.0,
+    "1.0": 30000.0
+  },
+  "programme_duration_quantiles": {
+    "0.0": 180.0,
+    "0.25": 2700.0,
+    "0.5": 5700.0,
+    "0.75": 7200.0,
+    "1.0": 32700.0
+  }
+}

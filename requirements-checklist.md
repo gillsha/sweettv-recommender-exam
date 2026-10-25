@@ -1,3 +1,5 @@
+> Superseded for corrected work: see REQUIREMENTS_STATUS.md and revised/PROTOCOL.md. The original checklist below is preserved as a historical record.
+
 # Проверяемые требования — sweet.tv, индивидуальный экзамен
 
 Источники прочитаны: exam_quiz_AVITO.md; homework_guidelines.pdf (12 страниц); sample_homework.pdf (6 страниц). Последний используется только как образец структуры, не как источник результатов. Приоритет: явные условия пользователя и экзамена; основной текст <=5 страниц, References отдельно. Дедлайн 2026-10-25 19:00 Europe/Moscow (также 19:00 Europe/Istanbul).

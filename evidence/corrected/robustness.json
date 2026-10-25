@@ -1,0 +1,26 @@
+[
+  {
+    "window": "main",
+    "users": 775,
+    "mean_delta": 0.003019354838709678,
+    "percentile95": [
+      0.0008343010752688174,
+      0.005286129032258064
+    ],
+    "paired_resamples": 2000,
+    "seed": 2026,
+    "caution": "conditional on fixed cohort and target assumptions; main is selection-biased"
+  },
+  {
+    "window": "forward",
+    "users": 1078,
+    "mean_delta": 0.0024056895485466915,
+    "percentile95": [
+      0.0006709183673469384,
+      0.0042210111317254155
+    ],
+    "paired_resamples": 2000,
+    "seed": 2026,
+    "caution": "conditional on fixed cohort and target assumptions; main is selection-biased"
+  }
+]

@@ -18,3 +18,11 @@ work/
 *.pkl
 private_predictions/
 selected_validation_predictions.json
+
+# Corrected runs: per-user outputs stay local/private
+private_*.json
+example_users.json
+personal_verified.json
+results/
+run_outputs/
+*.jpg

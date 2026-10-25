@@ -1,0 +1,7 @@
+{
+  "weighted_target_dense_error": 2.220446049250313e-16,
+  "implicit_solver": {
+    "dense_normal_equation_max_error": 1.7763568394002505e-15,
+    "cold_user_zero_factors": true
+  }
+}

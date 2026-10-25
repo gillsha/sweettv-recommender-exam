@@ -1,3 +1,5 @@
+> Historical record: the >=300-second/all-unique target below is invalid for Kaggle model selection. See revised/PROTOCOL.md and evidence/corrected for the replacement.
+
 # Additional local search: 150 actual runs
 
 This stage was explicitly requested after the original Kaggle notebook. It tests the student's proposal to mix personal frequency and overall popularity, adding a decay and frequency-exponent grid. It is not 150 Kaggle submissions and does not optimize the hidden private score.

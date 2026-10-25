@@ -1,0 +1,17 @@
+{
+  "window": "forward",
+  "cutoff": 1592780400,
+  "end": 1595804400,
+  "users": 1260,
+  "strict5_users": 1078,
+  "less5_users": 150,
+  "empty_users": 32,
+  "ties_across_fifth_users": 785,
+  "train_airings": 451452,
+  "validation_airings": 160252,
+  "train_short_qualified": 8456,
+  "validation_short_qualified": 2148,
+  "excluded_boundary_user_airings": 1328,
+  "candidates": 4582,
+  "train_users": 4773
+}
